@@ -185,7 +185,7 @@ nav ul li a {
   background: rgba(255, 255, 255, 0.1);
   padding: 1rem;
   top: 13rem;
-  right: -5rem;
+  right: 0rem;
 }
 
 .image-workout-videos > span {
@@ -215,8 +215,8 @@ nav ul li a {
   backdrop-filter: blur(20px);
   background: rgba(48, 48, 48, 0.54);
   padding: 2rem;
-  left: 10rem;
-  bottom: 10rem;
+  left: 0rem;
+  bottom: 8rem;
 
   display: flex;
   gap: 2rem;
