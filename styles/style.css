@@ -23,6 +23,7 @@
   --color-secondary: rgb(0, 0, 0);
   --color-white: rgb(255, 255, 255);
   --color-black: rgb(17, 17, 17);
+  --color-gray: rgba(255, 255, 255, 0.5);
 }
 
 /* General */
@@ -62,8 +63,7 @@ h2 {
 }
 
 p {
-  color: rgba(255, 255, 255, 0.5);
-  font-family: Inter;
+  color: var(--color-gray);
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 2.4rem;
@@ -87,6 +87,10 @@ img {
   object-fit: cover;
 }
 
+section {
+  padding: 7rem 0;
+}
+
 /* Utility components */
 .container {
   max-width: 106rem;
@@ -98,6 +102,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 5.4rem;
 }
 
 .text-miama {
@@ -106,6 +111,31 @@ img {
   font-weight: 400;
   line-height: 8rem;
   color: var(--color-white);
+}
+
+.btn {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 16px 40px 16px 40px;
+  border-radius: 4.6rem;
+
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 2.2rem;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
 }
 
 /* Header section */
@@ -167,7 +197,17 @@ nav ul li a {
 }
 
 .banner-content {
-  max-width: 60rem;
+  max-width: 52rem;
+}
+
+.banner-content p {
+  margin-top: 2.8rem;
+}
+
+.banner-content div {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2.8rem;
 }
 
 .banner-image {
