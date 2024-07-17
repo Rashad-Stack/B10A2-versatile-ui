@@ -20,10 +20,18 @@
 
   /* Colors */
   --color-primary: rgb(230, 83, 60);
-  --color-secondary: rgb(0, 0, 0);
+  --color-secondary: rgb(34, 34, 34);
+  --color-tertiary: rgb(17, 17, 17);
   --color-white: rgb(255, 255, 255);
-  --color-black: rgb(17, 17, 17);
+  --color-black: rgb(0, 0, 0);
   --color-gray: rgba(255, 255, 255, 0.5);
+
+  /* gradient */
+  --gradient-primary: linear-gradient(
+    180deg,
+    rgb(17, 17, 17),
+    rgba(119, 119, 119, 0) 100%
+  );
 }
 
 /* General */
@@ -43,7 +51,7 @@ body {
   line-height: 1.6;
   font-weight: 300;
   font-family: var(--font-inter);
-  /* background-color: var(--color-secondary); */
+  background-color: var(--color-secondary);
 }
 
 /* Typography */
@@ -60,6 +68,12 @@ h2 {
   font-size: 4.8rem;
   font-weight: 900;
   color: var(--color-white);
+}
+
+h3 {
+  color: var(--color-white);
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 p {
@@ -87,7 +101,7 @@ img {
   object-fit: cover;
 }
 
-section {
+section:not(:first-child) {
   padding: 7rem 0;
 }
 
@@ -113,6 +127,17 @@ section {
   color: var(--color-white);
 }
 
+.section-title {
+  max-width: 67.1rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title h2 {
+  margin-bottom: 1.4rem;
+}
+
+/* Buttons */
 .btn {
   width: 100%;
   display: flex;
@@ -140,7 +165,7 @@ section {
 
 /* Header section */
 header {
-  background-color: var(--color-black);
+  background-color: var(--color-tertiary);
 }
 
 nav {
@@ -188,12 +213,7 @@ nav ul li a {
 
 /* Hero section */
 #banner {
-  background: linear-gradient(
-    180deg,
-    rgb(17, 17, 17),
-    rgba(119, 119, 119, 0) 100%
-  );
-  height: 100vh;
+  background: var(--gradient-primary);
 }
 
 .banner-content {
@@ -225,7 +245,7 @@ nav ul li a {
   background: rgba(255, 255, 255, 0.1);
   padding: 1rem;
   top: 13rem;
-  right: 0rem;
+  right: -3rem;
 }
 
 .image-workout-videos > span {
@@ -284,4 +304,66 @@ nav ul li a {
   font-weight: 400;
   line-height: 2.4rem;
   letter-spacing: 0.5px;
+}
+
+/*End of Hero section */
+
+/* Habit section */
+#habit {
+  background-color: var(--color-black);
+}
+
+.habit-content {
+  margin-top: 5.8rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+.habit-card {
+  max-width: 23rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.habit-card > div {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 100%;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+
+.habit-card p {
+  text-align: center;
+}
+
+.habit-extra-mile {
+  margin-top: 10rem;
+  border-radius: 1.8rem;
+  background: rgb(34, 34, 34);
+  padding: 4.1rem 5.4rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.habit-extra-mile > div {
+  max-width: 44.4rem;
+}
+
+.habit-extra-mile > div h2 {
+  line-height: 120%;
+  margin-bottom: 1.4rem;
+}
+.habit-extra-mile > div a {
+  margin-top: 2.8rem;
+  width: fit-content;
+}
+.habit-extra-mile > div:last-child {
+  width: 36.6rem;
+  height: 31.2rem;
+  background-image: url("../images/run.jpg");
+  background-position: 67% 30%;
+  background-size: auto;
+  border-radius: 1.8rem;
 }
