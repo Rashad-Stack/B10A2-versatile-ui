@@ -21,23 +21,13 @@
   /* Colors */
   --color-primary: #e6533c;
   --color-secondary: #222222;
-  --color-tertiary: #111111;
+  --color-tertiary: #121212;
   --color-white: #ffffff;
   --color-black: #000000;
   --color-gray: #ffffff80;
 
   /* gradient */
-  --gradient-primary: linear-gradient(
-    180deg,
-    rgb(17, 17, 17),
-    rgba(119, 119, 119, 0) 100%
-  );
-  --gradient-primary: linear-gradient(
-    0deg,
-    rgba(0, 0, 0),
-    rgba(119, 119, 119, 0) 70%,
-    rgb(17, 17, 17) 100%
-  );
+  --gradient-primary: linear-gradient(180deg, #121212 60%, #77777700 100%);
 }
 
 /* General */
@@ -57,7 +47,7 @@ body {
   line-height: 1.6;
   font-weight: 300;
   font-family: var(--font-inter);
-  background-color: var(--color-secondary);
+  background-color: var(--color-black);
 }
 
 /* Typography */
@@ -118,13 +108,6 @@ section:not(:first-child) {
   padding: 0 2rem;
 }
 
-.wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 5.4rem;
-}
-
 .text-miama {
   font-family: var(--font-miama);
   font-size: 13rem;
@@ -135,6 +118,9 @@ section:not(:first-child) {
 
 .section-title {
   max-width: 67.1rem;
+}
+
+.title-center {
   margin: 0 auto;
   text-align: center;
 }
@@ -220,6 +206,13 @@ nav ul li a {
 /* Hero section */
 #banner {
   background: var(--gradient-primary);
+}
+
+#banner .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5.4rem;
 }
 
 .banner-content {
@@ -377,7 +370,7 @@ nav ul li a {
 }
 
 /* Max-width 978px Medium device */
-@media screen and (max-width: 90.78rem) {
+@media screen and (max-width: 978px) {
   .wrapper {
     flex-direction: column;
   }
@@ -401,13 +394,32 @@ nav ul li a {
 }
 
 /* Max-width 576px Medium device */
-@media screen and (max-width: 50.76rem) {
+@media screen and (max-width: 576px) {
   html {
-    font-size: 52.5%;
+    font-size: 42.5%;
+  }
+
+  h1 {
+    font-size: 6.8rem;
+  }
+  h2 {
+    font-size: 3.8rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+  }
+
+  .menu {
+    display: none;
   }
 
   .banner-content {
     max-width: 100%;
+  }
+
+  .banner-image div:nth-child(2) {
+    width: 100%;
   }
 
   .habit-content {
