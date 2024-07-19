@@ -260,7 +260,7 @@ nav ul li a {
   background: rgba(255, 255, 255, 0.1);
   padding: 1rem;
   top: 13rem;
-  right: -3rem;
+  right: 0;
 }
 
 .image-workout-videos > span {
@@ -290,8 +290,8 @@ nav ul li a {
   backdrop-filter: blur(20px);
   background: rgba(48, 48, 48, 0.54);
   padding: 2rem;
-  left: 0rem;
-  bottom: 8rem;
+  left: 15%;
+  bottom: 15%;
 
   display: flex;
   gap: 2rem;
@@ -490,7 +490,9 @@ nav ul li a {
 .bmi-table > table {
   width: 100%;
 }
-
+.bmi-table > table {
+  margin-top: 3rem;
+}
 .bmi-table > table tr th {
   text-align: left;
   font-size: 1.6rem;
@@ -537,6 +539,7 @@ nav ul li a {
 }
 
 .bmi-Calculator form button {
+  margin-top: 2rem;
   border: none;
   outline: none;
   width: fit-content;
@@ -575,9 +578,26 @@ nav ul li a {
   }
 
   /* Exercises section */
+  .exercise-images-up {
+    grid-template-columns: 20rem 1fr 20rem;
+  }
+  .exercise-images-down {
+    grid-template-columns: 1fr 20rem 1fr;
+  }
+
   .exercise-images-down div:nth-child(1) {
     justify-content: flex-start;
     align-items: flex-end;
+  }
+
+  /* BMI Calculator section  */
+  #bmi .section-title {
+    margin-left: 0;
+  }
+
+  #bmi .wrapper > .container {
+    flex-direction: column;
+    gap: 6rem;
   }
 }
 
@@ -617,6 +637,10 @@ nav ul li a {
     width: 100%;
   }
 
+  .image-workout-tutorials {
+    left: 0%;
+  }
+
   /* habit section */
   .habit-content {
     grid-template-columns: 1fr;
@@ -644,11 +668,15 @@ nav ul li a {
   /* Exercises section */
   .exercise-images-up,
   .exercise-images-down {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
   }
 
   .exercise-images-up div:nth-child(3),
   .exercise-images-down div:nth-child(3) {
     display: none;
+  }
+
+  .bmi-Calculator form div {
+    flex-direction: column;
   }
 }
