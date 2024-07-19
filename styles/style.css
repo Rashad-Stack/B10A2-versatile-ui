@@ -406,7 +406,11 @@ nav ul li a {
   }
 
   .habit-extra-mile > div {
-    max-width: 40.4rem;
+    max-width: 30.4rem;
+  }
+
+  .habit-extra-mile > div:last-child {
+    max-width: 25rem;
   }
 }
 
@@ -459,10 +463,12 @@ nav ul li a {
   }
 
   .habit-extra-mile > div a {
+    max-width: 100%;
     width: 100%;
   }
 
   .habit-extra-mile > div:last-child {
+    max-width: 100%;
     width: 100%;
   }
 }
