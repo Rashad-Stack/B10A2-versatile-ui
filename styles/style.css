@@ -116,6 +116,20 @@ section:not(:first-child) {
   color: var(--color-white);
 }
 
+/* Mobile menu trigger */
+.trigger {
+  display: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+.trigger span {
+  display: block;
+  width: 3.5rem;
+  border: 1px solid var(--color-white);
+}
+
 .section-title {
   max-width: 67.1rem;
 }
@@ -158,6 +172,7 @@ section:not(:first-child) {
 /* Header section */
 header {
   background-color: var(--color-tertiary);
+  padding: 3.5rem 0;
 }
 
 nav {
@@ -168,7 +183,7 @@ nav {
 }
 
 .logo a {
-  font-size: 3.6rem;
+  font-size: 36px;
   font-weight: 800;
   font-style: italic;
   line-height: 120%;
@@ -371,7 +386,7 @@ nav ul li a {
 
 /* Max-width 978px Medium device */
 @media screen and (max-width: 978px) {
-  .wrapper {
+  #banner .wrapper {
     flex-direction: column;
   }
 
@@ -386,6 +401,8 @@ nav ul li a {
 
   .habit-extra-mile {
     gap: 4rem;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .habit-extra-mile > div {
@@ -404,6 +421,12 @@ nav ul li a {
   }
   h2 {
     font-size: 3.8rem;
+  }
+
+  .trigger {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .btn {
