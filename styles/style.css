@@ -1,5 +1,5 @@
 /* Fonts from google fonts */
-/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 /* Local Miami font */
 @font-face {
@@ -681,11 +681,11 @@ nav ul li a {
     gap: 6rem;
   }
 
+  /* Footer section  */
   #footer .wrapper {
     justify-items: start;
     gap: 5rem;
   }
-
   #footer .wrapper div:first-child {
     grid-column: 1 / span 3;
     max-width: 50rem;
@@ -771,11 +771,13 @@ nav ul li a {
     flex-direction: column;
   }
 
+  /* Meet Our Team  section */
   #our-team .wrapper {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 30rem);
   }
 
+  /* Footer section */
   #footer .wrapper {
     grid-template-columns: 1fr;
   }
