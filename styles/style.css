@@ -1,5 +1,5 @@
 /* Fonts from google fonts */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"); */
 
 /* Local Miami font */
 @font-face {
@@ -51,6 +51,19 @@ body {
   color: var(--color-white);
 }
 
+ul {
+  list-style-type: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section:not(:first-child) {
+  padding-top: 10rem;
+}
 /* Typography */
 h1 {
   color: var(--color-white);
@@ -82,24 +95,10 @@ p {
 }
 
 a,
-:active,
-:visited {
+a:active,
+a:visited {
   color: var(--color-white);
   text-decoration: none;
-}
-
-ul {
-  list-style-type: none;
-}
-
-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-section:not(:first-child) {
-  padding-top: 10rem;
 }
 
 /* Utility components */
@@ -627,6 +626,36 @@ nav ul li a {
   text-align: center;
 }
 /*End of Footer  section  */
+
+/* Meet Our Team  section */
+#testimonial .wrapper {
+  margin-top: 8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#testimonial .wrapper div {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+#testimonial .wrapper div > div {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100%;
+  overflow: hidden;
+}
+#testimonial .wrapper div p {
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+/* End of Meet Our Team  section */
 
 /* Max-width 978px Medium device */
 @media screen and (max-width: 978px) {
