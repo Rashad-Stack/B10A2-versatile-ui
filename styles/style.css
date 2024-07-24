@@ -658,7 +658,7 @@ nav ul li a {
 /* End of Meet Our Team  section */
 
 /* Max-width 978px Medium device */
-@media screen and (max-width: 978px) {
+@media screen and (max-width: 992px) {
   #banner .wrapper {
     flex-direction: column;
   }
