@@ -24,7 +24,8 @@
   --color-tertiary: #121212;
   --color-white: #ffffff;
   --color-black: #000000;
-  --color-gray: #ffffff80;
+  --color-text: #ffffff80;
+  --color-gray: #ffffff1a;
 
   /* gradient */
   --gradient-primary: linear-gradient(180deg, #121212 60%, #77777700 100%);
@@ -87,8 +88,8 @@ h3 {
 }
 
 p {
-  color: var(--color-gray);
-  font-size: 1.6rem;
+  color: var(--color-text);
+  font-size: 1.4rem;
   font-weight: 400;
   line-height: 2.4rem;
   letter-spacing: 0.5px;
@@ -150,7 +151,7 @@ a:visited {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  padding: 16px 40px 16px 40px;
+  padding: 1.3rem 4rem;
   border-radius: 4.6rem;
 
   font-size: 1.8rem;
@@ -364,7 +365,7 @@ nav ul li a {
 }
 
 .habit-extra-mile > div {
-  max-width: 44.4rem;
+  max-width: 40rem;
 }
 
 .habit-extra-mile > div h2 {
@@ -373,7 +374,7 @@ nav ul li a {
 }
 .habit-extra-mile > div a {
   margin-top: 2.8rem;
-  width: fit-content;
+  max-width: 22.4rem;
 }
 .habit-extra-mile > div:last-child {
   width: 36.6rem;
@@ -401,7 +402,6 @@ nav ul li a {
 
 .exercise-images-up div,
 .exercise-images-down div {
-  font-size: 1.6rem;
   color: var(--color-white);
   padding: 2rem;
 
@@ -410,29 +410,31 @@ nav ul li a {
 
 .exercise-images-up div strong,
 .exercise-images-down div strong {
+  font-size: 1.4rem;
   font-weight: 500;
   width: 20rem;
 }
 
 .exercise-images-up div:nth-child(1) {
-  background: url("../images/exercise1.jpg"),
-    linear-gradient(#53dae190, #53dae190);
+  background-image: url("../images/exercise1.jpg");
+  background-color: rgba(6, 255, 210, 0.5);
   color: var(--color-black);
   background-blend-mode: overlay;
   background-size: cover;
 
   align-items: flex-end;
+  background-position: center;
 }
 .exercise-images-up div:nth-child(2) {
-  background: url("../images/exercise2.png"),
-    linear-gradient(#e16f5390, #e16f5390);
+  background-image: url("../images/exercise2.png");
+  background-color: rgba(255, 0, 0, 0.3);
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
 }
 .exercise-images-up div:nth-child(3) {
-  background: url("../images/exercise3.png"),
-    linear-gradient(#00000090, #00000090);
+  background-image: url("../images/exercise3.png");
+  background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
@@ -440,8 +442,8 @@ nav ul li a {
   align-items: flex-end;
 }
 .exercise-images-down div:nth-child(1) {
-  background: url("../images/exercise4.png"),
-    linear-gradient(#00000060, #00000060);
+  background-image: url("../images/exercise4.png");
+  background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
@@ -449,8 +451,8 @@ nav ul li a {
   justify-content: flex-end;
 }
 .exercise-images-down div:nth-child(2) {
-  background: url("../images/exercise5.jpg"),
-    linear-gradient(#149a2b90, #149a2b90);
+  background-image: url("../images/exercise5.jpg");
+  background-color: rgba(66, 255, 0, 0.3);
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
@@ -458,14 +460,15 @@ nav ul li a {
   align-items: flex-end;
 }
 .exercise-images-down div:nth-child(3) {
-  background: url("../images/exercise6.jpg"),
-    linear-gradient(#4490ed90, #4490ed90);
+  background-image: url("../images/exercise6.jpg");
+  background-color: rgba(0, 71, 255, 0.3);
   background-blend-mode: overlay;
   background-size: cover;
   background-position: center;
 
   align-items: flex-end;
 }
+
 /* Enf of exercises section */
 
 /* BMI Calculator section  */
@@ -491,6 +494,8 @@ nav ul li a {
 }
 .bmi-table > table {
   margin-top: 3rem;
+  border: 1px solid var(--color-gray);
+  border-collapse: collapse;
 }
 .bmi-table > table tr th {
   text-align: left;
@@ -503,10 +508,11 @@ nav ul li a {
   padding: 1rem;
   border: 1px solid var(--color-gray);
   font-size: 1.6rem;
+  color: var(--color-text);
 }
 
-.bmi-Calculator > .bmi-title {
-  max-width: 50rem;
+.bmi-Calculator {
+  max-width: 57.7rem;
 }
 
 .bmi-Calculator form {
@@ -520,21 +526,28 @@ nav ul li a {
   gap: 1rem;
 }
 
-.bmi-Calculator form input,
-.bmi-Calculator form select,
 .bmi-Calculator form label {
+  width: 100%;
+}
+.bmi-Calculator form input,
+.bmi-Calculator form select {
   border: none;
   outline: none;
-  background-color: rgb(64, 64, 64);
+  background-color: rgba(255, 255, 255, 0.1);
   color: var(--color-white);
   width: 100%;
-  padding: 5px 1rem;
+  padding: 1rem;
   border-radius: 5px;
   font-size: 1.6rem;
 }
 
-.bmi-Calculator form input::placeholder {
-  color: var(--color-white);
+.bmi-Calculator form select option {
+  color: var(--color-black);
+}
+
+.bmi-Calculator form input::placeholder,
+.bmi-Calculator form select {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .bmi-Calculator form button {
@@ -612,14 +625,14 @@ nav ul li a {
 
 #footer .wrapper div ul li a {
   font-size: 1.8rem;
-  color: var(--color-gray);
+  color: var(--color-text);
 }
 #footer .wrapper div ul li:not(:first-child) {
   margin-top: 1rem;
 }
 #footer .copy {
   width: 100%;
-  border-top: 0.1px solid var(--color-gray);
+  border-top: 0.1px solid var(--color-text);
   padding: 2rem 0;
 }
 #footer .copy p {
@@ -721,12 +734,8 @@ nav ul li a {
   }
 }
 
-/* Max-width 576px Medium device */
+/* Max-width 576px Small device */
 @media screen and (max-width: 576px) {
-  html {
-    font-size: 42.5%;
-  }
-
   h1 {
     font-size: 6.8rem;
   }
@@ -738,10 +747,6 @@ nav ul li a {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-  }
-
-  .btn {
-    padding: 10px 20px;
   }
 
   .menu {
